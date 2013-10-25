@@ -4,10 +4,24 @@
         <h1>Page 1</h1>
     </div>
 
-    <a jqm-button href="#/page2">To page2</a>
+    <div>
+        <div jqm-button inline="true" ng-click="app.openPanel='left'">
+            Open panel
+        </div>
+    </div>
 
-    <p ng-repeat="todo in todos">
-        {{todo.label}}
+    An input field:
+    <div jqm-textinput>
+
+    </div>
+
+    A big list:
+    <p>
+    <ul jqm-listview>
+        <li jqm-li-link="#/page2/{{$index}}" icon="ui-icon-arrow-r" ng-repeat="todo in app.todos">
+            {{todo.label}}
+        </li>
+    </ul>
     </p>
 
     <div jqm-footer>

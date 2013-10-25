@@ -8,7 +8,7 @@ angular.module('angularMobileDemoApp', ['jqm'])
         controller: 'Page1Ctrl',
         animation: 'page-slide'
       })
-      .when('/page2', {
+      .when('/page2/:todoIndex', {
         templateUrl: 'views/page2/page2.html',
         controller: 'Page2Ctrl',
         animation: 'page-slide'
